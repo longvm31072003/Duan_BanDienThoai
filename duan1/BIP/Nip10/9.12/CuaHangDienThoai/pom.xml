@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mycompany.cuahangdienthoai</groupId>
+    <artifactId>CuaHangDienThoai</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <exec.mainClass>com.mycompany.cuahangdienthoai.CuaHangDienThoai</exec.mainClass>
+    </properties>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+        <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>9.4.1.jre16</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.netbeans.external/AbsoluteLayout -->
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE130</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.lgooddatepicker</groupId>
+            <artifactId>LGoodDatePicker</artifactId>
+            <version>11.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.6.9.Final</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.toedter</groupId>
+            <artifactId>jcalendar</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
+        
+          <!-- Cam  ,QR-->
+        <!--webcam-->
+<dependency>
+    <groupId>com.github.sarxos</groupId>
+    <artifactId>webcam-capture</artifactId>
+    <version>0.3.12</version>
+</dependency>
+
+
+
+<!--<dependency>
+    <groupId>com.google.zxing</groupId>
+    <artifactId>zxing-core</artifactId>
+    <version>1.6</version>
+</dependency>-->
+<dependency>
+    <groupId>org.apache.camel</groupId>
+    <artifactId>camel-barcode</artifactId>
+    <version>3.19.0</version>
+</dependency>
+
+<dependency>
+    <groupId>com.google.zxing</groupId>
+    <artifactId>core</artifactId>
+    <version>3.5.1</version>
+</dependency>
+<dependency>
+    <groupId>com.nativelibs4java</groupId>
+    <artifactId>bridj</artifactId>
+    <version>0.7.0</version>
+</dependency>
+<dependency>
+    <groupId>com.google.zxing</groupId>
+    <artifactId>javase</artifactId>
+    <version>1.7</version>
+</dependency>
+
+
+<dependency>
+    <groupId>net.glxn.qrgen</groupId>
+    <artifactId>javase</artifactId>
+    <version>2.0</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.19.0</version>
+</dependency>
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>2.0.4</version>
+</dependency>
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-log4j12</artifactId>
+    <version>2.0.4</version>
+    <type>pom</type>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>mail</artifactId>
+    <version>1.4.7</version>
+</dependency>
+<!--tạo QR-->
+<dependency>
+    <groupId>net.glxn</groupId>
+    <artifactId>qrgen</artifactId>
+    <version>1.4</version>
+</dependency>
+  <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-full</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.3</version>
+        </dependency>
+      
+        <dependency> 
+            <groupId>org.apache.poi</groupId> 
+            <artifactId>poi</artifactId> 
+            <version>5.2.3</version> 
+        </dependency> 
+
+
+<!--webcam-->
+        
+        <!-- Cam  ,QR-->
+    </dependencies>
+    <build>
+        <finalName>DuAn1</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>
+                                ${project.build.directory}/libs
+                            </outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>libs</classpathPrefix>
+                            <mainClass>application.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <repositories>
+        <repository>
+            <id>netbeans</id>
+            <name>Netbeans rep</name>
+            <url>http://bits.netbeans.org/maven2/</url>
+        </repository>
+    </repositories>
+</project>
